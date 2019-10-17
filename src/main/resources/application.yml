@@ -1,0 +1,18 @@
+server:
+  port: 9898
+spring:
+  application:
+    name: spring-cloud-stream
+  rabbitmq:
+    host: 192.168.99.100
+    port: 5672
+    username: rabbit
+    password: 123456
+  cloud:
+    stream:
+      bindings:
+        myInput:
+          #指定输入通道对应的主题名
+          destination: cloudstream
+        myOutput:
+          destination: cloudstream
